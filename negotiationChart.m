@@ -1,4 +1,4 @@
-function [negotiationChart, finalBids] = AIAA_RandomHeatmap(s, showchart)
+function [negotiationChart, finalBids] = negotiationChart(s, showchart)
 
 
 % struct.bids: Nx2 array with player 1 & 2 bids
@@ -22,7 +22,7 @@ Bidsum = horzcat(bidP1,bidP2,b4);
 index = size(bidP1,1);
 
 
-% Normalize Criteria rank per plater
+% Normalize Criteria rank per player
 for n= 1:index
     c1(n) = eigP1(n)/(eigP1(n)+eigP2(n));
     c2(n) = eigP2(n)/(eigP1(n)+eigP2(n));
