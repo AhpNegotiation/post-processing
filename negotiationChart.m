@@ -1,10 +1,18 @@
 function [negotiationChart, finalBids] = negotiationChart(s, showchart)
 
-
 % struct.bids: Nx2 array with player 1 & 2 bids
 % struct.crits: Nx2 array with player 1 & 2 criterion ranking
 % struct.wtn: Nx2 array with player 1 & 2 wtn
 % struct.critNames: Nx1 cell array of criterion names (strings)
+
+% Example Usage
+% s.bids = [1,2];
+% s.crits = [1,1]; 
+% s.wtn = [2,6];
+% s.critNames = {'CritName'};
+% showchart = 1;
+% [chartHandle, finalBids] = negotiationChart(s,showchart);
+% figure(chartHandle)
 
 bidP1 = s.bids(:,1);
 bidP2 = s.bids(:,2);
